@@ -5,7 +5,6 @@ import (
 	"errors"
 	"time"
 
-	"github.com/gomodule/redigo/redis"
 )
 
 // Client Redis 客户端.
@@ -43,7 +42,7 @@ func (c *Client) getRedisPool() *redis.Pool {
 			c, err := c.getRedisConn()
 			if err != nil {
 				return nil, err
-			}
+			}.
 			return c, nil
 		},
 		MaxActive: c.maxActive,

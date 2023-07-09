@@ -4,10 +4,9 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"redis_lock/utils"
 	"sync/atomic"
 	"time"
-
-	"github.com/xiaoxuxiansheng/redis_lock/utils"
 )
 
 const RedisLockKeyPrefix = "REDIS_LOCK_PREFIX_"
